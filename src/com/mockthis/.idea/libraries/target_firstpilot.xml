@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="target_firstpilot">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/domock/target_firstpilot/testfirstpilot - Copy.zip!/" />
+      <root url="jar://$PROJECT_DIR$/domock/target_firstpilot/testfirstpilot.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

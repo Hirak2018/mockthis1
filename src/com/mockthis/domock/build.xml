@@ -1,0 +1,31 @@
+<project name="firstpilot" default="exports" basedir=".">
+<property name="build" value="${basedir}/build_mockthis"/>
+<property name="target" value="${basedir}/target_mockthis"/>
+<target name="init">
+        <mkdir dir="${build}"/>
+        <mkdir dir="${target}"/>
+</target>
+<target name="compile" depends="init">
+        <javac srcdir="mock" destdir="${build}" debug="on" includeantruntime="false">
+		<classpath>
+			<pathelement location="C:/Users/Admin/Downloads/junit-4.11.jar"/>
+			<pathelement location="C:/Users/Admin/Downloads/hamcrest-2.2.jar"/>
+		</classpath>
+		<compilerarg line="-XDignore.symbol.file"/>
+		<compilerarg line="--add-exports java.base/jdk.internal.org.objectweb.asm=ALL-UNNAMED"/>
+	</javac>
+</target>
+<target name="exports" depends="compile">
+        <jar jarfile="${target}/mockthis.jar" basedir="${build}">
+            <manifest>
+                <attribute name="Premain-Class" value="com.mockthis.domock.mock.Agent"/>
+                <attribute name="Can-Redefine-Classes" value="true"/>
+                <attribute name="Can-Transform-Classes" value="true"/>
+            </manifest>
+        </jar>
+    </target>
+<target name="clean">
+	<delete dir="{build}"/>
+	<delete dir="{target}"/>
+</target>
+</project>

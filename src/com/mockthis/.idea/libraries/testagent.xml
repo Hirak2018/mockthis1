@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="testagent">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/domock/target/testagent.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
